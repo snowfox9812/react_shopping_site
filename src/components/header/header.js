@@ -4,7 +4,7 @@ import BottomHeader from './bottomHeader.js'
 
 function Header() {
     return(
-        <div>
+        <div className="bg-white">
             <TopHeader />
             <BottomHeader />
         </div>

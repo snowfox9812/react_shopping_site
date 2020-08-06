@@ -47,6 +47,12 @@ input[id="search-expand"] {
 #footer {
   background-color: #111;
 }
+#footer-end {
+  font-size: 10px;
+}
+#footer-end-mobile{
+  font-size: 12px;
+}
 
 footer-content {
   max-width: 1400px;
@@ -54,6 +60,16 @@ footer-content {
 
 #social-network {
   font-size: 30px;
+}
+
+
+@media (max-width:768px) {
+  #footer-lg {
+    display: none;
+  }
+  #footer-sm {
+    display: block;
+  }
 }
 
 @media (max-width: 992px) { 
@@ -71,6 +87,15 @@ footer-content {
   }
   #mobile-nav {
     display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  #footer-lg {
+    display: block;
+  }
+  #footer-sm {
+    display: none;
   }
 }
 
