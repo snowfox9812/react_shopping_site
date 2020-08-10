@@ -1,101 +1,41 @@
 import React, { useState, setState } from 'react';
+import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap';
 
 function BottomHeader() {
-
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "200px";
-        document.getElementById("mobile-nav").style.marginLeft = "250px";
-      }
-    function closeNav() {
-        document.getElementById("mySidebar").style.width = "0px";
-        document.getElementById("mobile-nav").style.marginLeft = "0px";
-      }
-
-    const [isToggle, setToggle] = useState(false);
-    const [isToggle2, setToggle2] = useState(false);
-    const handleClick = (e) => {
-        var stateCheck = isToggle;
-
-        if(stateCheck == false) {
-            setToggle(true);
-        } else setToggle(false);
-      }
-    const handleMen = (e) => {
-        var stateCheck = isToggle2;
-
-        if(stateCheck == false) {
-            setToggle2(true);
-        } else setToggle2(false);
-    }
     return(
-        <div id="nav-mobile" className="border-bottom mx-2 position-relative">
-            {/* {console.log(isToggle)} */}
-            <div className="p-4 position-absolute">
-                <i id="logo" className="fal fa-store "></i>
-            </div>
-            <div id ="menu-items" className="text-center font-weight-bold">                    
-                <div className="d-inline-flex">
-                    <span className="p-4">MEN</span>
-                </div>
-                <div className="d-inline-flex">
-                    <span className="p-4">WOMEN</span>
-                </div>
-                <div className="d-inline-flex">
-                    <span className="p-4">KIDS</span>
-                </div>
-                <div className="d-inline-flex">
-                    <span className="p-4">CUSTOMISE</span>
-                </div>
-                <div className="d-inline-flex">
-                    <span className="p-4">SNKR LAUNCH CALENDAR</span>
-                </div>
-                <div className="d-inline-flex">
-                    <span className="p-4">SALE</span>
-                </div>
-            </div>
-            <div id= "search-box" className="text-center p-3">
-                <form className="border py-2">
-                    <i className="far fa-search"></i>
-                    <input id="search-expand" className="border-0 ml-2" type="text" placeholder="Search" name="search" ></input>
-                </form>
-            </div>
-            <div id="mobile-nav" className="p-4 float-right ">
-                <button>
-                    <i className="far fa-search"></i>
-                </button>
-                <button>
-                    <i className="fas fa-shopping-cart"></i>
-                </button>
-                <button onClick={openNav}>
-                    <i className="far fa-bars"></i>
-                </button>
-                <div id="mySidebar" className="sidebar">
-                    <a id= "closebtn" className="p-2" href="#0" onClick={closeNav}>&times;</a>
-                    <button class="dropdown-btn" onClick={handleClick}>My Account 
-                        <i className="far fa-arrow-right"></i>
-                    </button>
-                    <div id="dropdown-container" className="dropdown-container pl-2" style={{display: isToggle ? 'block': 'none'}}>
-                        <a className="py-1 px-2" href="#">Inbox</a>
-                        <a className="py-1 px-2" href="#">Orders</a>
-                        <a className="py-1 px-2" href="#">Favorites</a>
-                        <a className="py-1 px-2" href="#">Account settings</a>
-                        <a className="py-1 px-2" href="#">Logout</a>
-                    </div>
-                    <a className="p-2" href="#">SNKR Calendar</a>
-                    <a className="p-2" href="#">Member access</a>
-                    <button class="dropdown-btn" id="sidebar-2" onClick={handleMen}>Men
-                        <i className="far fa-arrow-right"></i>
-                    </button>
-                    <div id="dropdown-container" className="dropdown-container pl-2" style={{display: isToggle2 ? 'block': 'none'}}>
-                        <a className="py-1 px-2" href="#">Shoes</a>
-                        <a className="py-1 px-2" href="#">Clothing</a>
-                        <a className="py-1 px-2" href="#">Accessories and Equipment</a>
-                        <a className="py-1 px-2" href="#">Trending</a>
-                    </div>
-                </div>           
-            </div>
-        
-        </div>
+        <Navbar bg="light" expand="lg" fixed="top" className="mx-3 pb-3">
+        <Navbar.Brand href="#home">
+            <i id="logo" className="fal fa-store "></i>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="m-auto">
+                <NavDropdown title="MEN" id="basic-nav-dropdown">
+                    <NavDropdown.Item  href="#men/shoes">Shoes</NavDropdown.Item>
+                    <NavDropdown.Item href="#men/clothing">Clothing</NavDropdown.Item>
+                    <NavDropdown.Item href="#men/accessories">Accessories</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="WOMEN" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#women/shoes">Shoes</NavDropdown.Item>
+                    <NavDropdown.Item href="#women/clothing">Clothing</NavDropdown.Item>
+                    <NavDropdown.Item href="#women/accessories">Accessories</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="KIDS" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#kids/shoes">Shoes</NavDropdown.Item>
+                    <NavDropdown.Item href="#kids/clothing">Clothing</NavDropdown.Item>
+                    <NavDropdown.Item href="#kids/accessories">Accessories</NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link href="#customise">CUSTOMISE</Nav.Link>
+                <Nav.Link href="#launch">SNKR LAUNCH CALENDAR</Nav.Link>
+                <Nav.Link href="#sale">SALE</Nav.Link>
+                <Nav.Link href="#cart">CART</Nav.Link>
+            </Nav>
+            <Form inline>
+                <FormControl id ="search-expand" type="text" placeholder="Search" className="mr-sm-2" />
+                <Button variant="outline-secondary">Search</Button>
+            </Form>
+        </Navbar.Collapse>
+        </Navbar>
     )
 }
 

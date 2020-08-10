@@ -23,7 +23,7 @@ li {
   font-size: 28px;
 }
 #search-expand {
-  width: 90%;
+  /* width: 90%; */
 }
 #search-box {
   width: 50%;
@@ -34,8 +34,8 @@ li {
 }
 
 input[id="search-expand"]:focus {
-  padding-left:50px;  
-  margin-left:50px;
+  padding-left:20px;  
+  margin-left:20px;
   outline: none;
 }
 input[id="search-expand"] {
@@ -101,6 +101,7 @@ footer-content {
 }
 
 
+
 /* The sidebar menu */
 .sidebar {
   height: 100%; /* 100% Full-height */
@@ -111,7 +112,7 @@ footer-content {
   right: 0;
   background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  /* padding-top: 60px; Place content 60px from the top */
   transition: 0.15s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
@@ -153,3 +154,100 @@ footer-content {
   outline: none;
 }
 
+
+
+/* Main home's index */
+.home-present {
+  background-image: url(./asset/img/home/container-top-img.jpg);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: #f5f5f5;
+}
+.home-present {
+  height: 500px;
+}
+.present-content, .trending-content {
+  bottom: 0;
+}
+.home-new-product {
+  font-size: 48px;
+  font-weight: 700;
+}
+@media (min-width: 576px) {
+  .home-present {
+    height: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-present {
+    height: 700px;
+  }
+  .home-new-product {
+    font-size: 72px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-present {
+    height: 900px;
+  }
+}
+
+/* Trending */
+.trending-item-1 {
+  background-image: url(./asset/img/home/treding-img-1.jpg);
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: #f5f5f5;
+}
+.trending-item-2 {
+  background-image: url(./asset/img/home/treding-img-2.jpg);
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: #f5f5f5;
+
+}
+
+@media (min-width: 992px) {
+  .trending-item-1, .trending-item-2 {
+    height: 700px;
+  }
+}
+
+/* Feature */
+.feature {
+  background-image: url(./asset/img/home/home-feature-img.jpg);
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: #f5f5f5;
+}
+@media (min-width: 992px) {
+  .feature {
+    height: 700px;
+  }
+}
+.feature-title {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.new-arrival-picture {
+  width: 100%;
+  height: 300px;
+}
+.gender-category-picture {
+  width: 100%;
+}
