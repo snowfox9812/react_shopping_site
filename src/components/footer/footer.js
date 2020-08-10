@@ -2,23 +2,20 @@ import React, { useState, setState } from 'react';
 
 function Footer() {
     const [isToggle, setToggle] = useState(false);
-    const handleClick = (e) => {
+    const [isToggle2, setToggle2] = useState(false);
+    const handleFooterGetHelp = (e) => {
         var stateCheck = isToggle;
-        // var dropdownCount = document.getElementsByClassName("dropdown-btn");
-        // var i;
-        // for (i = 0; i < dropdownCount.length; i++) {
-        //     console.log(dropdownCount[i])
-        //     dropdownCount[i].addEventListener("Click", function(){
-        //         var dropdownContent = dropdownCount.nextElementSibling;
-        //         if (dropdownContent.style.display == "block") {
-        //             dropdownContent.style.display = "none"
-        //         } else dropdownContent.style.display = "block";
-        //     })
-        // }
         if(stateCheck == false) {
             setToggle(true);
         } else setToggle(false);
       }
+    
+    const handleFooterAbout = (e) => {
+        var stateCheck = isToggle2;
+        if(stateCheck == false) {
+            setToggle2(true);
+        } else setToggle2(false);
+    }
     
     return (
         <div id="footer">
@@ -138,7 +135,7 @@ function Footer() {
                 </div>
                 <div className="border border-secondary">
                     <div className="p-3">
-                        <button class="dropdown-btn w-100" id="sidebar-2" onClick={handleClick}>
+                        <button class="dropdown-btn w-100" id="sidebar-2" onClick={handleFooterGetHelp}>
                             <span className="text-white float-left">Get Help</span>
                             <span className="float-right">
                                 <i class="fal fa-plus"></i>
@@ -163,13 +160,13 @@ function Footer() {
                         </div>
                     </div>
                     <div className="p-3">
-                        <button class="dropdown-btn w-100" id="sidebar-2" onClick={handleClick}>
+                        <button class="dropdown-btn w-100" id="sidebar-2" onClick={handleFooterAbout}>
                             <span className="text-white float-left">About</span>
                             <span className="float-right">
                                 <i class="fal fa-plus"></i>
                             </span>
                         </button>
-                        <div id="dropdown-container" className="dropdown-container pl-2" style={{display: isToggle ? 'block': 'none'}}>
+                        <div id="dropdown-container" className="dropdown-container pl-2" style={{display: isToggle2 ? 'block': 'none'}}>
                             <div>
                                 <a className="py-1 px-2 text-white-50" href="#">News</a>
                             </div>

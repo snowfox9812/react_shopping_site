@@ -18,6 +18,7 @@ li {
   list-style: none;
 }
 
+
 #logo {
   font-size: 28px;
 }
@@ -42,6 +43,10 @@ input[id="search-expand"] {
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
+}
+
+#nav-mobile {
+  height: 800px;
 }
 
 #footer {
@@ -111,7 +116,7 @@ footer-content {
   background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.75s; /* 0.5 second transition effect to slide in the sidebar */
+  transition: 0.15s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
 /* The sidebar links */
@@ -123,6 +128,12 @@ footer-content {
 }
 
 /* Position and style the close button (top right corner) */
+#closebtn {
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+
 .sidebar .closebtn {
   position: absolute;
   top: 0;
