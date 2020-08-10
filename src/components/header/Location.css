@@ -1,0 +1,93 @@
+.Location {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 1s;
+}
+
+.Location:hover {
+    opacity: 1;
+}
+
+.Modal-location {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.Appear {
+    display: block;
+}
+
+.Close-modal {
+    padding: 28px;
+    margin-right: 28px;
+    float: right;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Close-modal img {
+    width: 32px;
+    height: 32px;
+    position: fixed;
+}
+
+.Content {
+    color: black;
+    margin: 4% 12% 8% 12%;
+}
+
+.Content h1 {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.Content h2 {
+    margin-top: 50px;
+    font-weight: lighter;
+}
+
+.Content> span {
+    margin-top: 5%;
+    padding: 10%;
+}
+
+.Africa {
+    display: flex;
+}
+
+.Nation {
+    margin-top: 30px;
+    display: flex;
+    cursor: pointer;
+}
+
+.Nation .Pin {
+    opacity: 0.1;
+    margin: 15px;
+    transition: 0.8s;
+    font-size: 22px;
+}
+
+.Nation .Pin:hover {
+    opacity: 0.8;
+}
+
+.Sub-nation {
+
+    padding-left: 5px;
+}
+
+.Sub-nation .Name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Sub-nation .Language {
+    font-size: 16px;
+    color: rgb(145, 144, 144);
+}
