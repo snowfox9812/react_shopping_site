@@ -45,10 +45,6 @@ input[id="search-expand"] {
   transition: all 0.7s ease 0s;
 }
 
-#nav-mobile {
-  height: 800px;
-}
-
 #footer {
   background-color: #111;
 }
