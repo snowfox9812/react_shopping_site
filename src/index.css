@@ -251,3 +251,16 @@ footer-content {
 .gender-category-picture {
   width: 100%;
 }
+
+.minw-240 {
+  min-width: 240px;
+}
+
+.fl-1-0-80 {
+  flex: 1 0 80% !important;
+}
+@media (max-width: 992px) {
+  #nav-left-sidebar {
+    display: none;
+  }
+}

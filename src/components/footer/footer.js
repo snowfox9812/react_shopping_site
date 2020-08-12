@@ -79,16 +79,16 @@ function Footer() {
                        
                     <div id= "social-network" className="col-3 float-right">
                         <a className="text-white-50 ml-3" href="#">
-                            <i class="fab fa-twitter"></i>
+                            <i className="fab fa-twitter"></i>
                         </a>
                         <a className="text-white-50 ml-3" href="#">
-                            <i class="fab fa-facebook"></i>
+                            <i className="fab fa-facebook"></i>
                         </a>
                         <a className="text-white-50 ml-3" href="#">
-                            <i class="fab fa-youtube"></i>
+                            <i className="fab fa-youtube"></i>
                         </a>
                         <a className="text-white-50 ml-3" href="#">
-                            <i class="fab fa-instagram"></i>
+                            <i className="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ function Footer() {
                         <div className="col-6">
                             <span className="text-white-50">
                                 <a className="text-white" href= "#">
-                                    <i class="fas fa-map-marker-alt"></i>
+                                    <i className="fas fa-map-marker-alt"></i>
                                 </a>
                                 <span className="ml-2">VietNam</span>
                                 <span className="ml-4">© 2020 Nike, Inc. All Rights Reserved</span>
@@ -138,7 +138,7 @@ function Footer() {
                         <button class="dropdown-btn w-100" id="sidebar-2" onClick={handleFooterGetHelp}>
                             <span className="text-white float-left">Get Help</span>
                             <span className="float-right">
-                                <i class="fal fa-plus"></i>
+                                <i className="fal fa-plus"></i>
                             </span>
                         </button>
                         <div id="dropdown-container" className="dropdown-container pl-2" style={{display: isToggle ? 'block': 'none'}}>
@@ -163,7 +163,7 @@ function Footer() {
                         <button class="dropdown-btn w-100" id="sidebar-2" onClick={handleFooterAbout}>
                             <span className="text-white float-left">About</span>
                             <span className="float-right">
-                                <i class="fal fa-plus"></i>
+                                <i className="fal fa-plus"></i>
                             </span>
                         </button>
                         <div id="dropdown-container" className="dropdown-container pl-2" style={{display: isToggle2 ? 'block': 'none'}}>
@@ -185,7 +185,7 @@ function Footer() {
                 <div id= "footer-end-mobile" className="border border-secondary">
                     <div id= "social-network" className="p-3">
                         <a className="text-white-50" href="#">
-                            <i class="fab fa-twitter"></i>
+                            <i className="fab fa-twitter"></i>
                         </a>
                         <a className="text-white-50 ml-3" href="#">
                             <i class="fab fa-facebook"></i>
