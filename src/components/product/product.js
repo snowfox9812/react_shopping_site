@@ -20,7 +20,7 @@ function Product(productContent) {
     return (
         <Link className="col-lg-4 col-sm-6 my-3 item-content" to="/men/tshirt">
             <Card>
-                <Card.Img href="#" variant="top" src={productContent.image} />
+                <Card.Img href="/product-detail" variant="top" src={productContent.image} />
                 <Card.Body>
                     <Card.Title>{productContent.title}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{productContent.price}</Card.Subtitle>

@@ -29,9 +29,6 @@ function App() {
         <Route exact path ="/cart">
           <Cart />
         </Route>
-        <Route exact path ="/product-detail">
-          <ProductDetail />
-        </Route>
       </Switch>
     </Router>
 
