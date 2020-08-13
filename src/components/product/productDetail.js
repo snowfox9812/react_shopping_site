@@ -1,13 +1,31 @@
 import React from 'react'
 import Product from './product.js'
+import Header from '../header/header.js'
+import Footer from '../footer/footer.js'
+import { Container, Row, Col, Alert, Button } from 'react-bootstrap'
+import ProductPicture from './productPicture.js'
 
 function ProductDetail () {
-    // var detailContent = {
-    //     image = "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ade52840-d93f-4ebf-83bf-940771f9f44d/fc-barcelona-2020-21-stadium-away-older-football-shirt-v4Kcrn.jpg",
-
-    // }
+    
     return (
-        <h2>this is detail</h2>
+        <div>
+            <Header />
+            <div>
+
+            </div>
+            <Row>
+                <Col lg={8}>
+                    <Row>
+                        <ProductPicture />
+                    </Row>
+                </Col>
+                <Col lg={4}>
+
+                </Col>
+            </Row>
+            <Footer />
+
+        </div>
     )
 }
 
