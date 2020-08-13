@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
-
 import Close from "../../asset/img/icon/exit.svg";
-import Loca from "../../asset/img/icon/pin.svg";
 
-import './Location.css';
+import '../footer/Location.css';
 
 function TopHeader() {
     const [classLocation, setClassLocation] = useState("Modal-location");
@@ -58,7 +55,7 @@ function TopHeader() {
                         <i className="fas fa-map-marker-alt"></i>
                         <span className="ml-1">VietNam</span>
                     </span>
-                </div>
+                </div> 
                 <div className={classLocation}>
                     <span className="Close-modal" onClick={handleCloseLocation}><img src={Close} /></span>
                     <div className="Content">
@@ -104,7 +101,7 @@ function TopHeader() {
                         </div>
                         <h2>Europe</h2>
                         <div className="Africa row">
-                            {americas.map((item, index) => (
+                            {africa.map((item, index) => (
                                 <div key={index} className="Nation col-md-3">
                                     <i className="fas fa-map-marker-alt Pin"></i>
                                     <span className="Sub-nation">
