@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.css';
 import Home from './components/bottom/home/home.js'
 import Men from './components/bottom/men/showMenItems.js'
@@ -12,10 +11,25 @@ import {
   Link
 } from "react-router-dom";
 
+import withFirebaseAuth from 'react-with-firebase-auth'
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+import firebaseConfig from './firebaseConfig';
 
-function App() {
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firebaseAppAuth = firebaseApp.auth();
+const providers = {
+  googleProvider: new firebase.auth.GoogleAuthProvider(),
+};
+
+function App(props) {
+  const user = props.user;
+  const signOut = props.signOut;
+  const signInWithGoogle = props.signInWithGoogle;
   return (
-    <Router> 
+    <div>
+      <Router> 
       <Switch>
         <Route exact path = "/">
           <Home />
@@ -31,8 +45,24 @@ function App() {
         </Route>
       </Switch>
     </Router>
+      <div className="App" style={{width: '500px'}}>
+          {
+            user 
+              ? <p>Hello, {user.displayName}</p>
+              : <p>Please sign in.</p>
+          }
+          {
+            user
+              ? <button onClick={signOut}>Sign out</button>
+              : <button onClick={signInWithGoogle}>Sign in with Google</button>
+          }
+      </div>
+    </div>
 
   );
 }
 
-export default App;
+export default withFirebaseAuth({
+  providers,
+  firebaseAppAuth,
+})(App);
