@@ -161,7 +161,7 @@ function Footer() {
                         </a>
                     </div>
                 </div>
-                <div id="footer-end" className="border-top border-secondary px-5 py-3">
+                <div id="footer-end" className="border-top border-secondary px-5 py-3 ">
                     <div className="row">
                         <div className="col-6">
                             <span className="text-white-50">
