@@ -53,6 +53,7 @@
 .Content h2 {
     margin-top: 50px;
     font-weight: lighter;
+    cursor: pointer;
 }
 
 .Content> span {

@@ -10,6 +10,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Create from './components/acount/create';
+import Login from './components/acount/login';
 
 import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
@@ -42,6 +44,12 @@ function App(props) {
         </Route> 
         <Route exact path ="/cart">
           <Cart />
+        </Route>
+        <Route exact path="/create-account">
+          <Create />
+        </Route>
+        <Route exact path="/sign-in">
+          <Login />
         </Route>
       </Switch>
     </Router>
