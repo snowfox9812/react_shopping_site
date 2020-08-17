@@ -246,7 +246,7 @@ footer-content {
 
 .new-arrival-picture {
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
 }
 .gender-category-picture {
   width: 100%;
@@ -262,5 +262,17 @@ footer-content {
 @media (max-width: 992px) {
   #nav-left-sidebar {
     display: none;
+  }
+  #product-price-pc {
+    display: none;
+  }
+}
+
+@media (min-width:992px) {
+  #product-price-mobile {
+    display: none;
+  }
+  #product-price-pc {
+    display:block;
   }
 }
