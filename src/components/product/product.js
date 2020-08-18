@@ -1,15 +1,12 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
 
 
 function Product(productContent) {
-    var productContent = {
+    productContent = {
         title : "FC Barcelona 2020/21 Stadium Away",
         price : "1,939,000vnd",
         description: "Men's T-shirt",
@@ -20,7 +17,7 @@ function Product(productContent) {
     return (
         <Link className="col-lg-4 col-sm-6 my-3 item-content" to="/men/tshirt">
             <Card>
-                <Card.Img href="#" variant="top" src={productContent.image} />
+                <Card.Img href="/product-detail" variant="top" src={productContent.image} />
                 <Card.Body>
                     <Card.Title>{productContent.title}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{productContent.price}</Card.Subtitle>

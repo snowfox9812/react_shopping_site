@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.css';
 import Home from './components/bottom/home/home.js'
 import Men from './components/bottom/men/showMenItems.js'
@@ -9,16 +8,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Create from './components/acount/create';
 import Login from './components/acount/login';
 import Launch from './components/launch/launch';
 
-
 function App() {
   return (
-    <Router> 
+    <div>
+      <Router> 
       <Switch>
         <Route exact path = "/">
           <Home />
@@ -43,6 +41,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </div>
 
   );
 }
