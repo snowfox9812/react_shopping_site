@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Create from './components/acount/create';
 import Login from './components/acount/login';
+import Launch from './components/launch/launch';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route exact path="/sign-in">
           <Login />
+        </Route>
+        <Route exact path="/launch">
+          <Launch />
         </Route>
       </Switch>
     </Router>

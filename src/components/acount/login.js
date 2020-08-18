@@ -77,7 +77,7 @@ function Login(props) {
 
     return (
         <div className="Create">
-           <Link to="/"><img src={NikeLogo} width={50} /></Link>
+            <Link to="/"><img alt="" src={NikeLogo} width={50} /></Link>
             <h2>YOUR ACCOUNT FOR EVERYTHING NIKE</h2>
             <Form onSubmit = {(event) => {signInWithEmailAndPasswordHandler(event, email.trim(), password.trim())}}>
                 <Form.Group>
