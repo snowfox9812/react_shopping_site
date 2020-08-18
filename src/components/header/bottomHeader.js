@@ -27,7 +27,7 @@ function BottomHeader() {
                     <NavDropdown.Item href="#kids/accessories">Accessories</NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="#customise">CUSTOMISE</Nav.Link>
-                <Nav.Link href="#launch">SNKR LAUNCH CALENDAR</Nav.Link>
+                <Nav.Link href="/launch">SNKR LAUNCH CALENDAR</Nav.Link>
                 <Nav.Link href="#sale">SALE</Nav.Link>
                 <Nav.Link href="/cart">CART</Nav.Link>
                 <Nav.Link href="/create-acount"><i class="fas fa-user-circle"></i></Nav.Link>
