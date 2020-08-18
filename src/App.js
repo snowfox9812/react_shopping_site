@@ -8,27 +8,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Create from './components/acount/create';
 import Login from './components/acount/login';
+import Launch from './components/launch/launch';
+import ItemDetail from './components/launch/itemDetail';
 
-import withFirebaseAuth from 'react-with-firebase-auth'
-import * as firebase from 'firebase/app';
-import 'firebase/auth';
-import firebaseConfig from './firebaseConfig';
-
-
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const firebaseAppAuth = firebaseApp.auth();
-const providers = {
-  googleProvider: new firebase.auth.GoogleAuthProvider(),
-};
-
-function App(props) {
-  const user = props.user;
-  const signOut = props.signOut;
-  const signInWithGoogle = props.signInWithGoogle;
+function App() {
   return (
     <div>
       <Router> 
@@ -51,26 +37,17 @@ function App(props) {
         <Route exact path="/sign-in">
           <Login />
         </Route>
+        <Route exact path="/launch">
+          <Launch />
+        </Route>
+        <Route exact path="/launch/item">
+          <ItemDetail />
+        </Route>
       </Switch>
     </Router>
-      <div className="App" style={{width: '500px'}}>
-          {
-            user 
-              ? <p>Hello, {user.displayName}</p>
-              : <p>Please sign in.</p>
-          }
-          {
-            user
-              ? <button onClick={signOut}>Sign out</button>
-              : <button onClick={signInWithGoogle}>Sign in with Google</button>
-          }
-      </div>
     </div>
 
   );
 }
 
-export default withFirebaseAuth({
-  providers,
-  firebaseAppAuth,
-})(App);
+export default App;

@@ -2,14 +2,17 @@ import React from 'react';
 
 import './account.css';
 
-import { Form, FormGroup, FormLabel, FormControl, FormText, Button, Nav } from 'react-bootstrap';
+import { Form,Button, Nav } from 'react-bootstrap';
 
 import NikeLogo from '../../asset/img/icon/Nike_logo.jpg';
+import {
+    Link
+  } from "react-router-dom";
 
 export default function Create() {
     return (
         <div className="Create">
-            <img src={NikeLogo} width={50} />
+            <Link to="/"><img alt="" src={NikeLogo} width={50} /></Link>
             <h2>BECOME A NIKE MEMBER</h2>
             <p>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</p>
             <Form>
@@ -42,15 +45,13 @@ export default function Create() {
                         label="Male"
                         type="radio"
                         name="formHorizontalRadios"
-                        id="formHorizontalRadios2"
                     />
                     <Form.Check
                         inline
                         label="Female"
                         type="radio"
                         name="formHorizontalRadios"
-                        id="formHorizontalRadios2" /
-                    >
+                    />
                 </Form.Group>
 
                 <Form.Group controlId="exampleForm.SelectCustomSizeSm">

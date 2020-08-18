@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductPrice from './productPrice.js'
 import ProductSize from './productSize.js'
-import { Container, Row, Col, Alert, Button } from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
 import Collapsible from 'react-collapsible';
 
 function ProductRightSidebar() {

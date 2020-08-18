@@ -49,14 +49,14 @@ function Footer() {
     }
     const handleFooterGetHelp = (e) => {
         var stateCheck = isToggle;
-        if (stateCheck == false) {
+        if (stateCheck === false) {
             setToggle(true);
         } else setToggle(false);
     }
 
     const handleFooterAbout = (e) => {
         var stateCheck = isToggle2;
-        if (stateCheck == false) {
+        if (stateCheck === false) {
             setToggle2(true);
         } else setToggle2(false);
     }
@@ -93,32 +93,32 @@ function Footer() {
                     <div className="col-3">
                         <ul>
                             <li>
-                                <a className="text-white mb-2" href="#">FIND A STORE</a>
+                                <a className="text-white mb-2" href="/">FIND A STORE</a>
                             </li>
                             <li>
-                                <a className="text-white mb-2" href="#">BECOME A MEMBER</a>
+                                <a className="text-white mb-2" href="/">BECOME A MEMBER</a>
                             </li>
                         </ul>
                     </div>
                     <div className="col-3">
                         <ul>
                             <li>
-                                <a className="text-white" href="#">GET HELP</a>
+                                <a className="text-white" href="/">GET HELP</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Order Status</a>
+                                <a className="text-white-50" href="/">Order Status</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Delivery</a>
+                                <a className="text-white-50" href="/">Delivery</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Return</a>
+                                <a className="text-white-50" href="/">Return</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Payment Options</a>
+                                <a className="text-white-50" href="/">Payment Options</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Contact Us</a>
+                                <a className="text-white-50" href="/">Contact Us</a>
                             </li>
 
                         </ul>
@@ -126,37 +126,37 @@ function Footer() {
                     <div className="col-3">
                         <ul>
                             <li>
-                                <a className="text-white" href="#">GET HELP</a>
+                                <a className="text-white" href="/">GET HELP</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Order Status</a>
+                                <a className="text-white-50" href="/">Order Status</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Delivery</a>
+                                <a className="text-white-50" href="/">Delivery</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Return</a>
+                                <a className="text-white-50" href="/">Return</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Payment Options</a>
+                                <a className="text-white-50" href="/">Payment Options</a>
                             </li>
                             <li>
-                                <a className="text-white-50" href="#">Contact Us</a>
+                                <a className="text-white-50" href="/">Contact Us</a>
                             </li>
                         </ul>
                     </div>
 
                     <div id="social-network" className="col-3 float-right">
-                        <a className="text-white-50 ml-3" href="#">
+                        <a className="text-white-50 ml-3" href="/">
                             <i className="fab fa-twitter"></i>
                         </a>
-                        <a className="text-white-50 ml-3" href="#">
+                        <a className="text-white-50 ml-3" href="/">
                             <i className="fab fa-facebook"></i>
                         </a>
-                        <a className="text-white-50 ml-3" href="#">
+                        <a className="text-white-50 ml-3" href="/">
                             <i className="fab fa-youtube"></i>
                         </a>
-                        <a className="text-white-50 ml-3" href="#">
+                        <a className="text-white-50 ml-3" href="/">
                             <i className="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -166,7 +166,7 @@ function Footer() {
                         <div className="col-6">
                             <span className="text-white-50">
                                 <span className="Location" onClick={handleOnLocation}>
-                                    <a className="text-white" href="#">
+                                    <a className="text-white" href="/">
                                         <i class="fas fa-map-marker-alt"></i>
                                     </a>
                                     <span className="ml-2">VietNam</span>
@@ -176,7 +176,7 @@ function Footer() {
                         </div>
 
                         <div className={classLocation}>
-                            <span className="Close-modal" onClick={handleCloseLocation}><img src={Close} /></span>
+                            <span className="Close-modal" onClick={handleCloseLocation}><img alt="" src={Close} /></span>
                             <div className="Content">
                                 <h1>Select your Location</h1>
                                 <h2>Africa</h2>
@@ -251,16 +251,16 @@ function Footer() {
                         <div className="col-6 ">
                             <span className="float-right">
                                 <span>
-                                    <a className="text-white-50 mx-2">Guides</a>
+                                    <a href="/" className="text-white-50 mx-2">Guides</a>
                                 </span>
                                 <span>
-                                    <a className="text-white-50 mx-2">Terms of Sale</a>
+                                    <a href="/" className="text-white-50 mx-2">Terms of Sale</a>
                                 </span>
                                 <span>
-                                    <a className="text-white-50 mx-2">Terms of Use</a>
+                                    <a href="/" className="text-white-50 mx-2">Terms of Use</a>
                                 </span>
                                 <span>
-                                    <a className="text-white-50 mx-2">Privacy and Policy  </a>
+                                    <a href="/" className="text-white-50 mx-2">Privacy and Policy  </a>
                                 </span>
                             </span>
                         </div>
@@ -271,10 +271,10 @@ function Footer() {
             <div id="footer-sm">
                 <div className="p-3">
                     <div className="mb-2">
-                        <a className="text-white" href="#">FIND A STORE</a>
+                        <a className="text-white" href="/">FIND A STORE</a>
                     </div>
                     <div className="mb-2">
-                        <a className="text-white" href="#">BECOME A MEMBER</a>
+                        <a className="text-white" href="/">BECOME A MEMBER</a>
                     </div>
                 </div>
                 <div className="border border-secondary">
@@ -287,19 +287,19 @@ function Footer() {
                         </button>
                         <div id="dropdown-container" className="dropdown-container pl-2" style={{ display: isToggle ? 'block' : 'none' }}>
                             <div>
-                                <a className="py-1 px-2 text-white-50" href="#">Order Status</a>
+                                <a className="py-1 px-2 text-white-50" href="/">Order Status</a>
                             </div>
                             <div>
-                                <a className="py-1 px-2 text-white-50" href="#">Delivery</a>
+                                <a className="py-1 px-2 text-white-50" href="/">Delivery</a>
                             </div>
                             <div>
-                                <a className="py-1 px-2 text-white-50" href="#">Return</a>
+                                <a className="py-1 px-2 text-white-50" href="/">Return</a>
                             </div>
                             <div>
-                                <a className="py-1 px-2 text-white-50" href="#">Payment Options</a>
+                                <a className="py-1 px-2 text-white-50" href="/">Payment Options</a>
                             </div>
                             <div>
-                                <a className="py-1 px-2 text-white-50" href="#">Contact Us</a>
+                                <a className="py-1 px-2 text-white-50" href="/">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -312,39 +312,39 @@ function Footer() {
                         </button>
                         <div id="dropdown-container" className="dropdown-container pl-2" style={{ display: isToggle2 ? 'block' : 'none' }}>
                             <div>
-                                <a className="py-1 px-2 text-white-50" href="#">News</a>
+                                <a className="py-1 px-2 text-white-50" href="/">News</a>
                             </div>
                             <div>
-                                <a className="py-1 px-2 text-white-50" href="#">Carriers</a>
+                                <a className="py-1 px-2 text-white-50" href="/">Carriers</a>
                             </div>
                             <div>
-                                <a className="py-1 px-2 text-white-50" href="#">Investors</a>
+                                <a className="py-1 px-2 text-white-50" href="/">Investors</a>
                             </div>
                             <div>
-                                <a className="py-1 px-2 text-white-50" href="#">Subtainability</a>
+                                <a className="py-1 px-2 text-white-50" href="/">Subtainability</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="footer-end-mobile" className="border border-secondary">
                     <div id="social-network" className="p-3">
-                        <a className="text-white-50" href="#">
+                        <a className="text-white-50" href="/">
                             <i className="fab fa-twitter"></i>
                         </a>
-                        <a className="text-white-50 ml-3" href="#">
+                        <a className="text-white-50 ml-3" href="/">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a className="text-white-50 ml-3" href="#">
+                        <a className="text-white-50 ml-3" href="/">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a className="text-white-50 ml-3" href="#">
+                        <a className="text-white-50 ml-3" href="/">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                     <div className="p-3">
                         <span className="text-white-50">
                             <span className="Location" onClick={handleOnLocation}>
-                                <a className="text-white" href="#">
+                                <a className="text-white" href="/">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </a>
                                 <span className="ml-2">VietNam</span>
@@ -354,7 +354,7 @@ function Footer() {
                     </div>
 
                     <div className={classLocation}>
-                        <span className="Close-modal" onClick={handleCloseLocation}><img src={Close} /></span>
+                        <span className="Close-modal" onClick={handleCloseLocation}><img alt="" src={Close} /></span>
                         <div className="Content">
                             <h1>Select your Location</h1>
                             <h2 onClick={handleOpenAfrica}>Africa</h2>
@@ -427,16 +427,16 @@ function Footer() {
 
                     <div className="p-3">
                         <div className="py-2">
-                            <a className="text-white-50 mx-2">Guides</a>
+                            <a href="/" className="text-white-50 mx-2">Guides</a>
                         </div>
                         <div className="py-2">
-                            <a className="text-white-50 mx-2">Terms of Sale</a>
+                            <a href="/" className="text-white-50 mx-2">Terms of Sale</a>
                         </div>
                         <div className="py-2">
-                            <a className="text-white-50 mx-2">Terms of Use</a>
+                            <a href="/" className="text-white-50 mx-2">Terms of Use</a>
                         </div>
                         <div className="py-2">
-                            <a className="text-white-50 mx-2">Privacy and Policy  </a>
+                            <a href="/" className="text-white-50 mx-2">Privacy and Policy  </a>
                         </div>
                     </div>
                 </div>

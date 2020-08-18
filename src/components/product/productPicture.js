@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Alert, Button } from 'react-bootstrap'
+import {Col} from 'react-bootstrap'
 
 function ProductPicture() {
     var imageList = [
@@ -13,7 +13,7 @@ function ProductPicture() {
     return (
         imageList.map((imageList) => 
         <Col sm={6}>
-            <img className="w-100 my-3" src={imageList}></img>
+            <img className="w-100 my-3" src={imageList} alt="#"></img>
         </Col>
         )
         

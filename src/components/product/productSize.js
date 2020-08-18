@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row, Col, Button } from 'react-bootstrap'
+import {Col, Button } from 'react-bootstrap'
 
 function ProductSize() {
     const productSize = [35,36,37,38,39,40,41,42,43]

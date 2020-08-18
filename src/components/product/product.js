@@ -1,15 +1,12 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
 
 
 function Product(productContent) {
-    var productContent = {
+    productContent = {
         title : "FC Barcelona 2020/21 Stadium Away",
         price : "1,939,000vnd",
         description: "Men's T-shirt",
