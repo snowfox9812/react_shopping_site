@@ -108,3 +108,8 @@ li .link {
 #footer {
     width: 100%;
 }
+
+.item_even {
+    text-align: center;
+    padding: 80px;
+}

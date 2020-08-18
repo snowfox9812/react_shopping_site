@@ -12,6 +12,7 @@ import {
 import Create from './components/acount/create';
 import Login from './components/acount/login';
 import Launch from './components/launch/launch';
+import ItemDetail from './components/launch/itemDetail';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
         </Route>
         <Route exact path="/launch">
           <Launch />
+        </Route>
+        <Route exact path="/launch/item">
+          <ItemDetail />
         </Route>
       </Switch>
     </Router>

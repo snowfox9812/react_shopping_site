@@ -20,7 +20,7 @@ export default function Item(props) {
 
     return (
         <div className="item">
-            <Link>
+            <Link to="/launch/item">
                 <img alt="item" className="image_item" src={props.src}/>
             </Link>
             <div id="item_title" onMouseOver={handleOnMouseOver} onMouseOut={handleOnMouseOut}>
