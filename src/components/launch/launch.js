@@ -117,7 +117,7 @@ export default function Launch() {
             </Row>
 
             <Row>
-                <Footer />
+                <Footer id="footer"/>
             </Row>
 
         </div >
