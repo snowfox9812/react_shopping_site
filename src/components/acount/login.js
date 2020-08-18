@@ -6,11 +6,14 @@ import { Form, FormGroup, FormLabel, FormControl, FormText, Button, Nav } from '
 
 import NikeLogo from '../../asset/img/icon/Nike_logo.jpg';
 
+import {
+    Link
+  } from "react-router-dom";
 
 export default function Login() {
     return (
         <div className="Create">
-            <img src={NikeLogo} width={50} />
+            <Link to="/"><img src={NikeLogo} width={50} /></Link>
             <h2>YOUR ACCOUNT FOR EVERYTHING NIKE</h2>
             <Form>
                 <Form.Group controlId="formBasicEmail">

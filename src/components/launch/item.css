@@ -1,0 +1,30 @@
+.item {
+    padding-top: 10%;
+    height: 32%
+}
+
+.image_item {
+    width: 100%;
+}
+
+#item_title {
+    text-align: center;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    cursor: pointer;
+}
+
+#item_title_text> h6 {
+    opacity: 0.7;
+}
+
+#item_title_text:hover {
+    display: none;
+}
+
+#item_title_button {
+    color: black;
+    opacity: 0.5;
+    font-weight: bold;
+}
