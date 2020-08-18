@@ -5,22 +5,6 @@ import Header from '../../header/header.js';
 import Footer from '../../footer/footer.js';
 
 function Home() {
-    const breakpoints = {
-        320: {
-            slidesPerView: 2,
-            spaceBetween: 20
-          },
-          // when window width is >= 480px
-          480: {
-            slidesPerView: 3,
-            spaceBetween: 30
-          },
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 4,
-            spaceBetween: 40
-          }
-    }
     return(
         <div>
             <Header />
@@ -113,15 +97,15 @@ function Home() {
                     <h2 className="mb-3">More Nike</h2>
                     <div className="row">
                         <div className="col-lg-4 col-md-4 col-sm-12 mb-5 position-relative text-center">
-                            <img className="gender-category-picture mb-3" src="https://static.nike.com/a/images/f_auto/dpr_2.0/h_540,c_limit/43ee6e1b-ed6c-4e0f-8049-155a0ededff8/nike-just-do-it.jpg"></img>
+                            <img alt="" className="gender-category-picture mb-3" src="https://static.nike.com/a/images/f_auto/dpr_2.0/h_540,c_limit/43ee6e1b-ed6c-4e0f-8049-155a0ededff8/nike-just-do-it.jpg"></img>
                             <button type="button" className="btn btn-light btn-lg rounded-pill px-4">Men</button>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12 mb-5 position-relative text-center">
-                            <img className="gender-category-picture mb-3" src="https://static.nike.com/a/images/f_auto/dpr_2.0/h_540,c_limit/5856e8b5-09a6-4763-9b4b-c1ecc7a3218f/nike-just-do-it.jpg"></img>
+                            <img alt="" className="gender-category-picture mb-3" src="https://static.nike.com/a/images/f_auto/dpr_2.0/h_540,c_limit/5856e8b5-09a6-4763-9b4b-c1ecc7a3218f/nike-just-do-it.jpg"></img>
                             <button type="button" className="btn btn-light btn-lg rounded-pill px-4">Women</button>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12 mb-5 position-relative text-center">
-                            <img className="gender-category-picture mb-3" src="https://static.nike.com/a/images/f_auto/dpr_2.0/h_540,c_limit/15c3c499-8584-4654-af89-f3b3aeb6b7db/nike-just-do-it.jpg"></img>
+                            <img alt="" className="gender-category-picture mb-3" src="https://static.nike.com/a/images/f_auto/dpr_2.0/h_540,c_limit/15c3c499-8584-4654-af89-f3b3aeb6b7db/nike-just-do-it.jpg"></img>
                             <button type="button" className="btn btn-light btn-lg rounded-pill px-4">Kids</button>
                         </div>
                     </div>

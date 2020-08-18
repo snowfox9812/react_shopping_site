@@ -4,7 +4,13 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'swiper/swiper-bundle.css'
+import 'swiper/swiper-bundle.css';
+import FirebaseContext from './components/firebase/context.js';
+import Firebase from './components/firebase/firebase.js';
+ 
+export default Firebase;
+ 
+export { FirebaseContext };
 
 ReactDOM.render(
   <React.StrictMode>

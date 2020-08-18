@@ -1,4 +1,4 @@
-import React, { useState, setState } from 'react';
+import React from 'react';
 import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap';
 
 function BottomHeader() {
@@ -30,7 +30,7 @@ function BottomHeader() {
                 <Nav.Link href="#launch">SNKR LAUNCH CALENDAR</Nav.Link>
                 <Nav.Link href="#sale">SALE</Nav.Link>
                 <Nav.Link href="/cart">CART</Nav.Link>
-                <Nav.Link href="/create-acount"><i class="fas fa-user-circle"></i></Nav.Link>
+                <Nav.Link href="/sign-in"><i class="fas fa-user-circle"></i></Nav.Link>
             </Nav>
             <Form inline>
                 <FormControl id ="search-expand" type="text" placeholder="Search" className="mr-sm-2" />

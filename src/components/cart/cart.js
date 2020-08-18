@@ -1,15 +1,14 @@
 import React from 'react'
 import Header from '../header/header.js'
 import Footer from '../footer/footer.js'
-import { Container, Row, Col, Alert, Button } from 'react-bootstrap'
-import {useState} from 'react'
+import { Row, Col, Button } from 'react-bootstrap'
 import AlertDissmisable from './showRecommendAlert.js'
 import BagItem from './bagItem.js'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Items from '../bottom/home/newItems.js'
 
 function Cart() {
-    const [show, setShow] = useState(true);
+    // const [show, setShow] = useState(true);
     var cartInfo = {
         pickupItems: '',
         pickupPrice: '4.999.999d',
