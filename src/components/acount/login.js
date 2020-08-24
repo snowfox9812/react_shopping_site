@@ -7,14 +7,17 @@ import { Form, Button } from 'react-bootstrap';
 import NikeLogo from '../../asset/img/icon/Nike_logo.jpg';
 import {
     Link,
-} from "react-router-dom";
-
-import withFirebaseAuth from 'react-with-firebase-auth';
+    Route,
+    Redirect,
+  } from "react-router-dom";
+import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from '../../firebaseConfig';
 import 'firebase/firestore';
-import { signInWithEmailAndPassword } from 'firebase'
+import {signInWithEmailAndPassword} from 'firebase'
+import Home from '../bottom/home/home.js'
+
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
 const auth = firebaseApp.auth();
@@ -26,15 +29,12 @@ function Login(props) {
     const signOut = props.signOut;
     const signInWithGoogle = props.signInWithGoogle;
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-
     // db.collection("users").get().then((querySnapshot) => {
     //     querySnapshot.forEach((doc) => {
     //         console.log(`${doc.id} => ${doc.data()}`);
     //     });
     // });
+  
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -52,6 +52,9 @@ function Login(props) {
     }).catch(function (error) {
         // An error happened.
     });
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
 
 
 
@@ -82,7 +85,7 @@ function Login(props) {
 
     return (
         <div className="Create">
-            <Link to="/"><img alt="" src={NikeLogo} width={50} /></Link>
+           <Link to="/"><img src={NikeLogo} width={50} /></Link>
             <h2>YOUR ACCOUNT FOR EVERYTHING NIKE</h2>
             <Form onSubmit={(event) => { signInWithEmailAndPasswordHandler(event, email.trim(), password.trim()) }}>
                 <Form.Group>
@@ -113,6 +116,7 @@ function Login(props) {
                     </Button>
                 }
             </div>
+            {/* <Route path='/' render={() => ( this.state.isLoggedIn ? <Home /> : <Redirect to='/login' /> )}/> */}
         </div>
     )
 }
