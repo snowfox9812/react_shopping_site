@@ -7,6 +7,8 @@ import { Form, Button } from 'react-bootstrap';
 import NikeLogo from '../../asset/img/icon/Nike_logo.jpg';
 import {
     Link,
+    Route,
+    Redirect,
   } from "react-router-dom";
 import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
@@ -14,6 +16,7 @@ import 'firebase/auth';
 import firebaseConfig from '../../firebaseConfig';
 import 'firebase/firestore';
 import {signInWithEmailAndPassword} from 'firebase'
+import Home from '../bottom/home/home.js'
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
 const auth = firebaseApp.auth();
@@ -25,39 +28,20 @@ function Login(props) {
     const signOut = props.signOut;
     const signInWithGoogle = props.signInWithGoogle;
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-
     // db.collection("users").get().then((querySnapshot) => {
     //     querySnapshot.forEach((doc) => {
     //         console.log(`${doc.id} => ${doc.data()}`);
     //     });
     // });
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-      });
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-    });
-    firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-    }).catch(function(error) {
-        // An error happened.
-    });
+    
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
 
-  
-
-    const signInWithEmailAndPasswordHandler = (event,email, password) => {
+    const signInWithEmailAndPasswordHandler = (event) => {
         event.preventDefault();
         auth.signInWithEmailAndPassword(email.trim(), password.trim())
-        .catch(error => {
+        .catch(error => {   
         setError("Error signing in with password and email!");
           console.error("Error signing in with password and email", error);
         });
@@ -66,18 +50,18 @@ function Login(props) {
       
       const onChangeHandler = (event) => {
           const {name, value} = event.currentTarget;
-        
-          if(name === 'userEmail') {
+        //   console.log(value);
+          if(name === 'email') {
               setEmail(value);
           }
-          else if(name === 'userPassword'){
+          else if(name === 'password'){
             setPassword(value);
           }
       };
 
     return (
         <div className="Create">
-            <Link to="/"><img alt="" src={NikeLogo} width={50} /></Link>
+           <Link to="/"><img src={NikeLogo} width={50} /></Link>
             <h2>YOUR ACCOUNT FOR EVERYTHING NIKE</h2>
             <Form onSubmit = {(event) => {signInWithEmailAndPasswordHandler(event, email.trim(), password.trim())}}>
                 <Form.Group>
@@ -100,6 +84,7 @@ function Login(props) {
                         <i className="fab fa-google"></i></Button>
                 }
             </div>
+            {/* <Route path='/' render={() => ( this.state.isLoggedIn ? <Home /> : <Redirect to='/login' /> )}/> */}
         </div>
     )
 }
