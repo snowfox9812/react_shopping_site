@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap';
 
 import {
@@ -8,21 +8,9 @@ import {
     IfFirebaseAuthedAnd,
   } from "@react-firebase/auth";
 function BottomHeader() {
-    const isSignedIn="";
-    const user ="";
-    const providerId=""
     return(
         <div style={{marginBottom: '66px'}}>
             <FirebaseAuthConsumer>
-                    {/* {({ isSignedIn, user, providerId }) => {
-                    return (
-                    <pre style={{ height: 300, overflow: "auto" }}>
-                        {JSON.stringify({ isSignedIn, user, providerId }, null, 2)}
-                    </pre>
-                    );
-                }} */}
-                {/* {(isSignedIn,user,providerId) =JSON.stringify({ isSignedIn, user, providerId }, null, 2)} */}
-
                 <Navbar bg="light" expand="lg" fixed="top" className=" pb-3">
                     <Navbar.Brand href="/">
                         <i id="logo" className="fal fa-store "></i>
@@ -49,11 +37,19 @@ function BottomHeader() {
                             <Nav.Link href="/launch">SNKR LAUNCH CALENDAR</Nav.Link>
                             <Nav.Link href="#sale">SALE</Nav.Link>
                             <Nav.Link href="/cart">CART</Nav.Link>
-                            <Nav.Link href="/sign-in">
-                                <i class="fas fa-user-circle"></i>
-                                {/* {user.displayName} */}
-                                {/* {console.log(user)} */}
-                                {/* {JSON.stringify({ isSignedIn, user, providerId }, null, 2)} */}
+                            <Nav.Link href="/sign-in" className="d-flex" style={{alignItems: "center"}}>
+                                <i className="fas fa-user-circle mr-1"></i>
+                                <IfFirebaseAuthedAnd
+                                    filter={({ providerId }) => providerId !== "anonymous"}
+                                >
+                                    {({ user }) => {
+                                        // return <div>{user.displayName}</div>;
+                                        if (user.displayName !== "") {
+                                            return <div>{user.displayName}</div>
+                                        }
+                                    }
+                                    }
+                                </IfFirebaseAuthedAnd>
                             </Nav.Link>
                         </Nav>
                         <Form inline>
