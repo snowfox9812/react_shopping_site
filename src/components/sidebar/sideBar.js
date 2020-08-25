@@ -37,7 +37,7 @@ function Sidebar() {
             </div>
         </Collapsible>
       </div>
-      <Button variant="primary" size="md" block>Apply Filter</Button>
+      <button type="button" className="btn btn-outline-dark rounded-pill mt-3" style={{width:'100%'}}>Apply Filter</button>
     </div>
   );
 }

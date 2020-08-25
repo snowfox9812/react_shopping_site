@@ -3,7 +3,7 @@ import {Row, Col } from 'react-bootstrap'
 
 function ProductPrice() {
     const productInfo = {
-        category: 'shoe',
+        category: 'shoes',
         gender: 'Men',
         name: 'Nike Air VaporMax Flyknit 3',
         price: '4.999.999d'

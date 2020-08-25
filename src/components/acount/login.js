@@ -36,7 +36,7 @@ function Login() {
                     const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
                     firebase.auth().signInWithPopup(googleAuthProvider);
                     console.log(googleAuthProvider)
-                    // handleClick();
+                    handleClick();
                 }}
                 >
               Sign In with Google
@@ -70,8 +70,8 @@ function Login() {
           <IfFirebaseAuthedAnd
             filter={({ providerId }) => providerId !== "anonymous"}
           >
-            {({ isSignedIn }) => {
-              return <div>You are authenticated with {isSignedIn == true ? "1":"2"}</div>;
+            {({ providerId }) => {
+              return <div>You are authenticated with {providerId}</div>;
             }}
           </IfFirebaseAuthedAnd>
         </div>
