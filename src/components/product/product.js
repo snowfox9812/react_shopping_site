@@ -7,13 +7,6 @@ import {
 import * as firebase from "firebase/app";
 import "firebase/firestore";
 
-import {
-    FirestoreProvider,
-    FirestoreCollection
-} from "@react-firebase/firestore";
-
-
-const s = (a) => JSON.stringify(a, null, 2);
 
 function Product(prop) {
     // propduction = {
@@ -27,10 +20,10 @@ function Product(prop) {
 console.log("anskfsd");
     return (
         <Link className="col-lg-4 col-sm-6 my-3 item-content" to="/men/shoes-detail">
-            <Card>p
+            <Card>
                 <Card.Img href="/product-detail" variant="top" src={prop.image} />
                 <Card.Body>
-                    <Card.Title>{prop.title}</Card.Title>
+                    <Card.Title style={{height:'70px'}}>{prop.title}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{prop.price}</Card.Subtitle>
                     <Card.Text>
                         {prop.description}

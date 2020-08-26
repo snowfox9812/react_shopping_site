@@ -4,9 +4,9 @@ import { Button } from 'react-bootstrap';
 
 function Sidebar() {
   return(
-    <div>
+    <div className="mb-4 px-3">
       <div className="border-bottom p-2">
-        <Collapsible trigger="Gender" transitionTime="150">
+        <Collapsible trigger="Gender" transitionTime="150" style={{cursor: "pointer"}}>
             <div className="m-2">
               <input type="checkbox" id="gender" className="mr-2" name="Men" value="Men"></input>
               <label for="Men">Men</label>

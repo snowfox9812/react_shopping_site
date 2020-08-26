@@ -89,46 +89,6 @@ export default function Launch() {
 
             <Row id="content">
                 {
-                    obj.map((item, index) => (
-                        <div className="col-md-4">
-                            <Item
-                                key={index}
-                                h6={item.name}
-                                h2={item.description}
-                                src={item.images[0]}
-                            />
-                        </div>)
-                    )
-
-                }
-
-                {
-                    data.map((item, index) => (
-                        <div className="col-md-4">
-                            <Item
-                                key={index}
-                                h6={item.h6}
-                                h2={item.h2}
-                                src={item.url}
-                            />
-                        </div>)
-                    )
-                }
-
-                {
-                    data.map((item, index) => (
-                        <div className="col-md-4">
-                            <Item
-                                key={index}
-                                h6={item.h6}
-                                h2={item.h2}
-                                src={item.url}
-                            />
-                        </div>)
-                    )
-                }
-
-                {
                     data.map((item, index) => (
                         <div className="col-md-4">
                             <Item
