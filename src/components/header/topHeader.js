@@ -56,7 +56,7 @@ function TopHeader() {
                         <span className="ml-1">VietNam</span>
                     </span>
                 </div> 
-                <div className={classLocation}>
+                <div className={classLocation} style={{height:'800px'}}>
                     <span className="Close-modal" onClick={handleCloseLocation}><img src={Close} /></span>
                     <div className="Content">
                         <h1>Select your Location</h1>

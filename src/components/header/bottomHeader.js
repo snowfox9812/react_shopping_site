@@ -9,9 +9,9 @@ import {
   } from "@react-firebase/auth";
 function BottomHeader() {
     return(
-        <div style={{marginBottom: '66px'}}>
+        <div>
             <FirebaseAuthConsumer>
-                <Navbar bg="light" expand="lg" fixed="top" className=" pb-3">
+                <Navbar bg="light" expand="lg" className=" pb-3">
                     <Navbar.Brand href="/">
                         <i id="logo" className="fal fa-store "></i>
                     </Navbar.Brand>

@@ -9,23 +9,18 @@ import { Button, Row, Col } from 'react-bootstrap';
 import * as firebase from "firebase/app";
 import "firebase/firestore";
 
-import {
-    FirestoreProvider,
-    FirestoreCollection
-} from "@react-firebase/firestore";
-
 
 const s = (a) => JSON.stringify(a, null, 2);
 
 
 
-function Men() {
+function Clothing() {
     let obj = [];
     const dataInit = []
     const [data, setData] = useState(dataInit);
 
     async function getData() {
-        await firebase.firestore().collection('product').doc('1').collection('shoes').get().then(function (querySnapshot) {
+        await firebase.firestore().collection('product').doc('0').collection('clothing').get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data().price, "  ", doc.data().description);
@@ -84,4 +79,4 @@ function Men() {
     )
 }
 
-export default Men;
+export default Clothing;

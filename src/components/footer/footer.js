@@ -60,32 +60,6 @@ function Footer() {
             setToggle2(true);
         } else setToggle2(false);
     }
-
-    const handleOpenAfrica = (e) => {
-        let temp = openAfrica;
-        setOpenAfrica(!temp);
-    }
-
-    const handleOpenAmericas = (e) => {
-        let temp = openAmericas;
-        setOpenAmericas(!temp);
-    }
-
-    const handleOpenAsia = (e) => {
-        let temp = openAsia;
-        setOpenAsia(!temp);
-    }
-
-    const handleOpenEurope = (e) => {
-        let temp = openEurope;
-        setOpenEurope(!temp);
-    }
-
-    const handleOpenMiddleEast = (e) => {
-        let temp = openMiddleEast;
-        setOpenMiddleEast(!temp);
-    }
-
     return (
         <div id="footer">
             <div id="footer-lg" className="footer-content">
@@ -165,7 +139,7 @@ function Footer() {
                     <div className="row">
                         <div className="col-6">
                             <span className="text-white-50">
-                                <span className="Location" onClick={handleOnLocation}>
+                                <span className="Location">
                                     <a className="text-white" href="/">
                                         <i class="fas fa-map-marker-alt"></i>
                                     </a>
@@ -173,79 +147,6 @@ function Footer() {
                                 </span>
                                 <span className="ml-4">© 2020 Nike, Inc. All Rights Reserved</span>
                             </span>
-                        </div>
-
-                        <div className={classLocation}>
-                            <span className="Close-modal" onClick={handleCloseLocation}><img alt="" src={Close} /></span>
-                            <div className="Content">
-                                <h1>Select your Location</h1>
-                                <h2>Africa</h2>
-                                <div className="Africa row">
-                                    {africa.map((item, index) => (
-                                        <div key={index} className="Nation col-md-3">
-                                            <i className="fas fa-map-marker-alt Pin"></i>
-                                            <span className="Sub-nation">
-                                                <div className="Name">{item.name}</div>
-                                                <div className="Language">{item.language}</div>
-                                            </span>
-                                        </div>
-                                    ))
-                                    }
-                                </div>
-                                <h2>Americas</h2>
-                                <div className="Africa row">
-                                    {americas.map((item, index) => (
-                                        <div key={index} className="Nation col-md-3">
-                                            <i className="fas fa-map-marker-alt Pin"></i>
-                                            <span className="Sub-nation">
-                                                <div className="Name">{item.name}</div>
-                                                <div className="Language">{item.language}</div>
-                                            </span>
-                                        </div>
-                                    ))
-                                    }
-                                </div>
-                                <h2>Asia Pacific</h2>
-                                <div className="Africa row">
-                                    {africa.map((item, index) => (
-                                        <div key={index} className="Nation col-md-3">
-                                            <i className="fas fa-map-marker-alt Pin"></i>
-                                            <span className="Sub-nation">
-                                                <div className="Name">{item.name}</div>
-                                                <div className="Language">{item.language}</div>
-                                            </span>
-                                        </div>
-                                    ))
-                                    }
-                                </div>
-                                <h2>Europe</h2>
-                                <div className="Africa row">
-                                    {africa.map((item, index) => (
-                                        <div key={index} className="Nation col-md-3">
-                                            <i className="fas fa-map-marker-alt Pin"></i>
-                                            <span className="Sub-nation">
-                                                <div className="Name">{item.name}</div>
-                                                <div className="Language">{item.language}</div>
-                                            </span>
-                                        </div>
-                                    ))
-                                    }
-                                </div>
-                                <h2>Middle East</h2>
-                                <div className="Africa row">
-                                    {africa.map((item, index) => (
-                                        <div key={index} className="Nation col-md-3">
-                                            <i className="fas fa-map-marker-alt Pin"></i>
-                                            <span className="Sub-nation">
-                                                <div className="Name">{item.name}</div>
-                                                <div className="Language">{item.language}</div>
-                                            </span>
-                                        </div>
-                                    ))
-                                    }
-                                </div>
-
-                            </div>
                         </div>
 
                         <div className="col-6 ">
@@ -352,79 +253,6 @@ function Footer() {
                             <span className="ml-4">© 2020 Nike, Inc. All Rights Reserved</span>
                         </span>
                     </div>
-
-                    <div className={classLocation}>
-                        <span className="Close-modal" onClick={handleCloseLocation}><img alt="" src={Close} /></span>
-                        <div className="Content">
-                            <h1>Select your Location</h1>
-                            <h2 onClick={handleOpenAfrica}>Africa</h2>
-                            <div className="Africa row">
-                                {africa.map((item, index) => (
-                                    <div key={index} className="Nation col-md-3" style={{display: openAfrica ? "block" : "none"}}>
-                                        <i className="fas fa-map-marker-alt Pin"></i>
-                                        <span className="Sub-nation">
-                                            <div className="Name">{item.name}</div>
-                                            <div className="Language">{item.language}</div>
-                                        </span>
-                                    </div>
-                                ))
-                                }
-                            </div>
-                            <h2 onClick={handleOpenAmericas}>Americas</h2>
-                            <div className="Africa row">
-                                {americas.map((item, index) => (
-                                    <div key={index} className="Nation col-md-3" style={{display: openAmericas ? "block" : "none"}}>
-                                        <i className="fas fa-map-marker-alt Pin"></i>
-                                        <span className="Sub-nation">
-                                            <div className="Name">{item.name}</div>
-                                            <div className="Language">{item.language}</div>
-                                        </span>
-                                    </div>
-                                ))
-                                }
-                            </div>
-                            <h2 onClick={handleOpenAsia}>Asia Pacific</h2>
-                            <div className="Africa row">
-                                {africa.map((item, index) => (
-                                    <div key={index} className="Nation col-md-3" style={{display: openAsia ? "block" : "none"}}>
-                                        <i className="fas fa-map-marker-alt Pin"></i>
-                                        <span className="Sub-nation">
-                                            <div className="Name">{item.name}</div>
-                                            <div className="Language">{item.language}</div>
-                                        </span>
-                                    </div>
-                                ))
-                                }
-                            </div>
-                            <h2 onClick={handleOpenEurope}>Europe</h2>
-                            <div className="Africa row">
-                                {africa.map((item, index) => (
-                                    <div key={index} className="Nation col-md-3" style={{display: openEurope ? "block" : "none"}}>
-                                        <i className="fas fa-map-marker-alt Pin"></i>
-                                        <span className="Sub-nation">
-                                            <div className="Name">{item.name}</div>
-                                            <div className="Language">{item.language}</div>
-                                        </span>
-                                    </div>
-                                ))
-                                }
-                            </div>
-                            <h2 onClick={handleOpenMiddleEast}>Middle East</h2>
-                            <div className="Africa row">
-                                {africa.map((item, index) => (
-                                    <div key={index} className="Nation col-md-3" style={{display: openMiddleEast ? "block" : "none"}}>
-                                        <i className="fas fa-map-marker-alt Pin"></i>
-                                        <span className="Sub-nation">
-                                            <div className="Name">{item.name}</div>
-                                            <div className="Language">{item.language}</div>
-                                        </span>
-                                    </div>
-                                ))
-                                }
-                            </div>
-                        </div>
-                    </div>
-
                     <div className="p-3">
                         <div className="py-2">
                             <a href="/" className="text-white-50 mx-2">Guides</a>

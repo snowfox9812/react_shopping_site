@@ -9,7 +9,7 @@ function Home() {
         <div>
             <Header />
             <div className="mx-3">
-                <div className="home-present position-relative">
+                <div className="home-present position-relative" style={{marginTop:'95px'}}>
                     <div className="present-content position-absolute text-white p-3">
                         <div>
                             <h2 className="home-new-product">New product</h2>
