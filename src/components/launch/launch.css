@@ -113,3 +113,9 @@ li .link {
     text-align: center;
     padding: 80px;
 }
+
+.load-more {
+    text-align: center;
+    margin-left: auto;
+    margin-right: 50px;
+}
