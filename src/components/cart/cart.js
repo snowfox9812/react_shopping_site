@@ -17,7 +17,7 @@ function Cart() {
         totalPrice: 0
     };
     return (
-        <div>
+        <div style={{marginTop:'95px'}}>
             <Header />
                 <Row className="mx-3 py-5 border-bottom">
                     <Col lg={8}>

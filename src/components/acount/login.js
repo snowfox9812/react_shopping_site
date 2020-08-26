@@ -26,32 +26,34 @@ function Login() {
     history.push("/");
   }
     return (
-        <div className="Create  ">
+        <div className="Create mt-5">
 
             <Link to="/"><img src={NikeLogo} width={50} /></Link>
             <h2>YOUR ACCOUNT FOR EVERYTHING NIKE</h2>
             <div className="my-3">
-            <Button
+            <button
                 onClick={() => {
                     const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
                     firebase.auth().signInWithPopup(googleAuthProvider);
                     console.log(googleAuthProvider)
                     handleClick();  
                 }}
+                className="btn btn-outline-dark rounded-pill"
                 >
               Sign In with Google
-            </Button>
+            </button>
             </div>
             <div className="my-3">
-              <Button
+              <button
                   onClick={() => {
                     firebase.auth().signOut();  
                   }}
+                  className="btn btn-outline-dark rounded-pill"
               >
                   Sign Out
-              </Button>
+              </button>
             </div>
-        <FirebaseAuthConsumer>
+        {/* <FirebaseAuthConsumer>
           {({ isSignedIn, user, providerId }) => {
             var userData = JSON.stringify({ isSignedIn, user, providerId }, null, 2);
               return (
@@ -60,8 +62,8 @@ function Login() {
                 </pre>
               );
           }}
-        </FirebaseAuthConsumer>
-        <div>
+        </FirebaseAuthConsumer> */}
+        {/* <div>
           <IfFirebaseAuthed>
             {() => {
               return <div>You are authenticated</div>;
@@ -74,7 +76,7 @@ function Login() {
               return <div>You are authenticated with {providerId}</div>;
             }}
           </IfFirebaseAuthedAnd>
-        </div>
+        </div> */}
       </div>
     );
 }
